@@ -1,0 +1,4 @@
+interface:
+  display_name: "Overseer"
+  short_description: "Keep project context clean and current"
+  default_prompt: "Use $overseer to scan this project for stale context and artifact drift."

@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en" data-theme="luxury">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overseer - Execution-ready masterplan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/daisyui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/themes.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.4/dist/index.global.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { min-height: 100vh; }
+    :where(.grid, .flex, .layout-grid, .layout-flex) > *,
+    :where([style*="display: grid"], [style*="display:grid"], [style*="display: flex"], [style*="display:flex"]) > * { min-width: 0; }
+    :where(p, h1, h2, h3, h4, h5, h6, li, dd, blockquote, figcaption, td, th, .badge, .label) { overflow-wrap: anywhere; }
+    :where(img, svg, video, canvas, iframe) { max-width: 100%; height: auto; }
+    .artifact-shell { background:
+      radial-gradient(circle at 92% 7%, color-mix(in oklab, var(--color-primary) 18%, transparent), transparent 30rem),
+      var(--color-base-100); }
+    .artifact-kicker { letter-spacing: .18em; text-transform: uppercase; }
+    .artifact-rule { border-color: color-mix(in oklab, var(--color-base-content) 12%, transparent); }
+    .artifact-code { font-variant-ligatures: none; }
+    .artifact-sidebar { scrollbar-width: thin; }
+    .mermaid { min-width: 0; overflow-x: auto; }
+    .mermaid svg { min-width: 720px; margin: 0 auto; }
+    @media (max-width: 768px) { .mermaid svg { min-width: 620px; } }
+    @media print {
+      .artifact-sidebar, .drawer-button { display: none !important; }
+      .drawer-content { margin: 0 !important; }
+      .collapse-content { display: block !important; }
+    }
+  </style>
+</head>
+<body class="artifact-shell text-base-content">
+  <div class="drawer lg:drawer-open">
+    <input id="artifact-nav" type="checkbox" class="drawer-toggle">
+    <div class="drawer-content">
+      <header class="sticky top-0 z-30 border-b artifact-rule bg-base-100/85 backdrop-blur-xl">
+        <div class="navbar mx-auto max-w-6xl px-4 lg:px-8">
+          <div class="navbar-start gap-3">
+            <label for="artifact-nav" class="btn btn-square btn-ghost drawer-button lg:hidden" aria-label="Open navigation">☰</label>
+            <span class="font-semibold">Overseer</span>
+            <span class="badge badge-success badge-soft">Gate B clear</span>
+          </div>
+          <div class="navbar-end gap-2">
+            <span class="badge badge-outline">v1.0</span>
+            <span class="badge badge-outline">MIT</span>
+            <span class="badge badge-outline">$0/month</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="mx-auto max-w-6xl space-y-16 px-5 py-10 lg:px-10 lg:py-16">
+        <section id="summary" class="hero min-h-[58vh] rounded-box border artifact-rule bg-base-200/55 shadow-2xl">
+          <div class="hero-content max-w-4xl flex-col items-start py-14 text-left lg:py-20">
+            <p class="artifact-kicker text-xs font-bold text-primary">Execution-ready masterplan</p>
+            <h1 class="text-5xl font-black leading-[.95] tracking-tight sm:text-6xl lg:text-7xl">Keep project context true.</h1>
+            <p class="max-w-3xl text-lg leading-relaxed opacity-80 lg:text-xl">Overseer is a repo-local Agent Skill that reconciles AI-facing documentation with repository reality, then applies only owner-approved context and file-hygiene changes.</p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="badge badge-lg badge-primary">scan</span>
+              <span class="badge badge-lg badge-secondary">audit</span>
+              <span class="badge badge-lg badge-accent">clean</span>
+            </div>
+            <div role="alert" class="alert alert-success alert-soft mt-5 max-w-3xl">
+              <span><strong>Plain-language promise:</strong> every AI agent starts with clean, current project context.</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="product" class="space-y-7">
+          <div class="max-w-3xl">
+            <p class="artifact-kicker text-xs font-bold text-primary">Product boundary</p>
+            <h2 class="mt-2 text-4xl font-bold">A project caretaker, not another orchestrator</h2>
+            <p class="mt-3 text-lg opacity-75">The host agent supplies judgment and conversation context. A deterministic local kernel owns filesystem evidence, safety, approval binding, recovery, and verification.</p>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2">
+            <article class="card card-border bg-base-100 shadow-lg">
+              <div class="card-body">
+                <h3 class="card-title text-success">Overseer does</h3>
+                <ul class="list-disc space-y-2 pl-5 opacity-85">
+                  <li>Detect stale, duplicated, missing, and ambiguous context.</li>
+                  <li>Maintain one root <code>overseer.md</code> ledger.</li>
+                  <li>Repair approved living documentation and Markdown references.</li>
+                  <li>Rename, move, and archive exact approved files.</li>
+                  <li>Journal, verify, and recover every mutation.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card card-border bg-base-100 shadow-lg">
+              <div class="card-body">
+                <h3 class="card-title text-error">Overseer does not</h3>
+                <ul class="list-disc space-y-2 pl-5 opacity-85">
+                  <li>Create invoices, reports, images, CSV data, or other outputs.</li>
+                  <li>Rewrite business artifacts or source code.</li>
+                  <li>Permanently delete project or archive content.</li>
+                  <li>Run agents, schedule itself, or watch in the background.</li>
+                  <li>Require a UI, account, service, network, or paid API.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="modes" class="space-y-7">
+          <div class="max-w-3xl">
+            <p class="artifact-kicker text-xs font-bold text-primary">Public vocabulary</p>
+            <h2 class="mt-2 text-4xl font-bold">Three modes, one approval boundary</h2>
+          </div>
+          <div class="grid gap-5 lg:grid-cols-3">
+            <article class="card card-border bg-base-100">
+              <div class="card-body">
+                <span class="badge badge-primary badge-soft">Default</span>
+                <h3 class="card-title text-2xl">scan</h3>
+                <p>Lightweight session-close check over changed, created, and referenced paths plus a bounded ownership and link closure.</p>
+                <p class="text-sm opacity-65">May prepare only an approved ledger update.</p>
+              </div>
+            </article>
+            <article class="card card-border bg-base-100">
+              <div class="card-body">
+                <span class="badge badge-secondary badge-soft">Periodic</span>
+                <h3 class="card-title text-2xl">audit</h3>
+                <p>Bounded repository-wide evidence inventory with complete, partial, or limit-exceeded coverage.</p>
+                <p class="text-sm opacity-65">Partial evidence never authorizes mutation.</p>
+              </div>
+            </article>
+            <article class="card card-border bg-base-100">
+              <div class="card-body">
+                <span class="badge badge-accent badge-soft">Approval-gated</span>
+                <h3 class="card-title text-2xl">clean</h3>
+                <p>Dry-run-first remediation grouped into Documentation, Organize, and Archive with visible forced dependencies.</p>
+                <p class="text-sm opacity-65">Only exact dependency-closed approval can apply.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="flow" class="space-y-7">
+          <div class="max-w-3xl">
+            <p class="artifact-kicker text-xs font-bold text-primary">Primary lifecycle</p>
+            <h2 class="mt-2 text-4xl font-bold">Nothing mutates before the owner sees the exact plan</h2>
+          </div>
+          <div class="card card-border bg-base-100 shadow-xl">
+            <div class="card-body overflow-hidden">
+              <div class="mermaid">
+flowchart TD
+  classDef entry fill:#eef2ff,stroke:#6366f1,color:#3730a3
+  classDef proc fill:#f1f5f9,stroke:#64748b,color:#0f172a
+  classDef store fill:#fef3c7,stroke:#f59e0b,color:#92400e
+  classDef ext fill:#ccfbf1,stroke:#14b8a6,color:#0f766e
+  start([Host submits exact root and intent]):::entry --> inspect[Capture immutable bounded evidence]:::proc
+  inspect --> interpret[Host interprets evidence as inert data]:::proc
+  interpret --> prepare[Kernel validates and prepares dry run]:::proc
+  prepare --> owner{Owner approves exact subset?}
+  owner -- no --> unchanged([Success: repository unchanged]):::entry
+  owner -- yes --> bind[Bind approval to snapshot plan operations and paths]:::proc
+  bind --> journal[(Durable journal and preimages)]:::store
+  journal --> apply[Apply and revalidate each operation]:::proc
+  apply --> verify{All postconditions pass?}
+  verify -- yes --> receipt[(Verified receipt and manifest)]:::store
+  receipt --> done([Success: context reconciled]):::entry
+  verify -- no --> recover[Conflict-aware rollback]:::proc
+  recover --> attention([Rolled back or manual attention]):::entry
+  class owner,verify entry
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="architecture" class="space-y-7">
+          <div class="max-w-3xl">
+            <p class="artifact-kicker text-xs font-bold text-primary">Deep module</p>
+            <h2 class="mt-2 text-4xl font-bold">Semantic judgment outside, deterministic authority inside</h2>
+          </div>
+          <div class="card card-border bg-base-100 shadow-xl">
+            <div class="card-body overflow-hidden">
+              <div class="mermaid">
+flowchart LR
+  classDef entry fill:#eef2ff,stroke:#6366f1,color:#3730a3
+  classDef proc fill:#f1f5f9,stroke:#64748b,color:#0f172a
+  classDef store fill:#fef3c7,stroke:#f59e0b,color:#92400e
+  classDef ext fill:#ccfbf1,stroke:#14b8a6,color:#0f766e
+  owner([Owner]):::entry
+  subgraph host[Capable AI host]
+    skill[SKILL.md workflow]:::proc
+  end
+  subgraph local[Offline Overseer skill]
+    cli[Canonical JSON adapter]:::proc
+    kernel[Policy and transaction kernel]:::proc
+    detectors[Immutable evidence detectors]:::proc
+  end
+  repo[(Project repository)]:::store
+  ledger[(overseer.md and state)]:::store
+  archive[(Recoverable archive)]:::store
+  git[Optional local Git]:::ext
+  owner --> skill --> cli --> kernel
+  kernel --> detectors
+  detectors --> repo
+  detectors --> git
+  kernel --> repo
+  kernel --> ledger
+  kernel --> archive
+  kernel --> cli --> skill --> owner
+              </div>
+            </div>
+          </div>
+          <div class="mockup-code artifact-code shadow-xl">
+            <pre data-prefix="$"><code>python3 scripts/overseer.py scan --root /project --request scan.json</code></pre>
+            <pre data-prefix="$"><code>python3 scripts/overseer.py clean prepare --root /project --proposal plan.json</code></pre>
+            <pre data-prefix="$"><code>python3 scripts/overseer.py clean commit --root /project --prepared prepared.json --approval approval.json</code></pre>
+          </div>
+        </section>
+
+        <section id="safety" class="space-y-7">
+          <div class="max-w-3xl">
+            <p class="artifact-kicker text-xs font-bold text-primary">Safety contract</p>
+            <h2 class="mt-2 text-4xl font-bold">The kernel has less authority than a general shell</h2>
+          </div>
+          <div class="stats stats-vertical w-full border artifact-rule bg-base-100 shadow-xl lg:stats-horizontal">
+            <div class="stat">
+              <div class="stat-title">Mutation primitives</div>
+              <div class="stat-value text-primary">5</div>
+              <div class="stat-desc">Ledger, policy, living doc, exact move, exact archive</div>
+            </div>
+            <div class="stat">
+              <div class="stat-title">Permanent project deletes</div>
+              <div class="stat-value text-success">0</div>
+              <div class="stat-desc">Archive remains owner-managed</div>
+            </div>
+            <div class="stat">
+              <div class="stat-title">Network calls</div>
+              <div class="stat-value text-success">0</div>
+              <div class="stat-desc">Offline standard library runtime</div>
+            </div>
+            <div class="stat">
+              <div class="stat-title">Standing approvals</div>
+              <div class="stat-value text-success">0</div>
+              <div class="stat-desc">Every plan binds exact state</div>
+            </div>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="alert alert-warning alert-soft"><span><strong>Untrusted content:</strong> repository text is inert evidence. It cannot grant approval, change policy, or request tool use.</span></div>
+            <div class="alert alert-info alert-soft"><span><strong>Concurrent edits:</strong> every forward and reverse operation revalidates identity and hashes. Unexpected state is never overwritten.</span></div>
+            <div class="alert alert-error alert-soft"><span><strong>Secrets:</strong> no secret excerpts, values, or full protected paths enter previews, ledger, journals, manifests, or errors.</span></div>
+            <div class="alert alert-success alert-soft"><span><strong>Recovery:</strong> exact preimages survive only until verified completion or conflict-aware recovery.</span></div>
+          </div>
+        </section>
+
+        <section id="platform" class="space-y-7">
+          <div class="max-w-3xl">
+            <p class="artifact-kicker text-xs font-bold text-primary">Support matrix</p>
+            <h2 class="mt-2 text-4xl font-bold">Honest guarantees beat optimistic portability</h2>
+          </div>
+          <div class="overflow-x-auto rounded-box border artifact-rule bg-base-100 shadow-lg">
+            <table class="table table-zebra">
+              <thead><tr><th>Platform</th><th>Inspect</th><th>Preview</th><th>Mutate</th><th>Condition</th></tr></thead>
+              <tbody>
+                <tr><td class="font-semibold">Linux</td><td><span class="badge badge-success">Yes</span></td><td><span class="badge badge-success">Yes</span></td><td><span class="badge badge-success">Yes</span></td><td>Required capability probe passes</td></tr>
+                <tr><td class="font-semibold">macOS</td><td><span class="badge badge-success">Yes</span></td><td><span class="badge badge-success">Yes</span></td><td><span class="badge badge-success">Yes</span></td><td>Required capability probe passes</td></tr>
+                <tr><td class="font-semibold">Windows</td><td><span class="badge badge-success">Yes</span></td><td><span class="badge badge-success">Yes</span></td><td><span class="badge badge-warning">No in v1</span></td><td>Fails closed with <code>UNSAFE_PLATFORM</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="validation" class="space-y-7">
+          <div class="max-w-3xl">
+            <p class="artifact-kicker text-xs font-bold text-primary">Adversarial validation</p>
+            <h2 class="mt-2 text-4xl font-bold">Gate B passed after closing the real blockers</h2>
+            <p class="mt-3 text-lg opacity-75">The red team attacked the plan before masterplan authoring. Its blockers became normative contracts instead of deferred gaps.</p>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2">
+            <article class="card card-border bg-base-100"><div class="card-body"><h3 class="card-title">Ledger</h3><p>Managed markers, stable IDs, fixed schema, deterministic replacement, true no-op, and bounded history.</p><span class="badge badge-success badge-soft">Resolved</span></div></article>
+            <article class="card card-border bg-base-100"><div class="card-body"><h3 class="card-title">Approval</h3><p>Exact operations, paths, groups, snapshot, plan, hashes, expiry, and host attestation.</p><span class="badge badge-success badge-soft">Resolved</span></div></article>
+            <article class="card card-border bg-base-100"><div class="card-body"><h3 class="card-title">Recovery</h3><p>Exact preimages, per-operation revalidation, conflict-aware reverse steps, and manual-attention truthfulness.</p><span class="badge badge-success badge-soft">Resolved</span></div></article>
+            <article class="card card-border bg-base-100"><div class="card-body"><h3 class="card-title">Trust boundary</h3><p>Prompt-injection isolation, secret-safe evidence, content-class matrix, and platform capability tiers.</p><span class="badge badge-success badge-soft">Resolved</span></div></article>
+          </div>
+        </section>
+
+        <section id="build" class="space-y-7">
+          <div class="max-w-3xl">
+            <p class="artifact-kicker text-xs font-bold text-primary">Build sequence</p>
+            <h2 class="mt-2 text-4xl font-bold">Nine demoable slices to full QA</h2>
+          </div>
+          <ul class="steps steps-vertical w-full lg:steps-horizontal">
+            <li class="step step-primary">Skeleton</li>
+            <li class="step">Baseline</li>
+            <li class="step">Evidence</li>
+            <li class="step">Planning</li>
+            <li class="step">Docs</li>
+            <li class="step">Archive</li>
+            <li class="step">Recovery</li>
+            <li class="step">Packaging</li>
+            <li class="step">Full QA</li>
+          </ul>
+          <div class="space-y-3">
+            <div class="collapse collapse-arrow border artifact-rule bg-base-100"><input type="checkbox"><div class="collapse-title font-semibold">M1-M3: prove the evidence path</div><div class="collapse-content"><p>Build the portable skill skeleton, collision-safe baseline, deterministic ledger, streamed scan and audit, optional Git evidence, classification, and coverage semantics.</p></div></div>
+            <div class="collapse collapse-arrow border artifact-rule bg-base-100"><input type="checkbox"><div class="collapse-title font-semibold">M4-M6: prove exact approved mutation</div><div class="collapse-content"><p>Land dry-run planning and approval, then documentation transactions, exact moves, supported reference repairs, transaction-qualified archives, and manifests.</p></div></div>
+            <div class="collapse collapse-arrow border artifact-rule bg-base-100"><input type="checkbox"><div class="collapse-title font-semibold">M7-M9: prove failure behavior and portability</div><div class="collapse-content"><p>Exercise capability probes, crash recovery, secrets, adversarial paths, host packaging, installed-skill smoke tests, and every acceptance criterion.</p></div></div>
+          </div>
+        </section>
+
+        <section id="handoff" class="rounded-box border artifact-rule bg-base-200 p-7 shadow-xl lg:p-10">
+          <div class="grid gap-8 lg:grid-cols-[1.4fr_.8fr]">
+            <div>
+              <p class="artifact-kicker text-xs font-bold text-primary">One-shot handoff</p>
+              <h2 class="mt-2 text-4xl font-bold">The decisions are finished. The build can begin.</h2>
+              <p class="mt-4 text-lg opacity-75">The Markdown package remains the source of truth. The executing agent reads <code>masterplan.md</code>, the four normative contracts, and <code>STATUS.md</code>, then follows the milestone order without re-opening product decisions.</p>
+            </div>
+            <div class="card card-border bg-base-100"><div class="card-body">
+              <h3 class="card-title">Package</h3>
+              <ul class="space-y-2 text-sm">
+                <li><code>masterplan.md</code></li>
+                <li><code>EXECUTE.md</code></li>
+                <li><code>STATUS.md</code></li>
+                <li><code>references/ledger-contract.md</code></li>
+                <li><code>references/protocol-contract.md</code></li>
+                <li><code>references/policy-contract.md</code></li>
+                <li><code>references/platform-safety.md</code></li>
+              </ul>
+            </div></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t artifact-rule bg-base-200/70">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm opacity-65 lg:px-10">
+          <span>Overseer masterplan v1.0</span>
+          <span>English deliverables. MIT open source. No hosted dependency.</span>
+        </div>
+      </footer>
+    </div>
+
+    <aside class="drawer-side z-40">
+      <label for="artifact-nav" aria-label="Close navigation" class="drawer-overlay"></label>
+      <nav class="artifact-sidebar min-h-full w-72 overflow-y-auto border-r artifact-rule bg-base-200 p-5">
+        <div class="mb-7 px-3 pt-2">
+          <div class="text-2xl font-black tracking-tight">OVERSEER</div>
+          <div class="mt-1 text-xs opacity-55">Context hygiene skill</div>
+        </div>
+        <ul class="menu menu-sm gap-1">
+          <li><a href="#summary" class="menu-active">Summary</a></li>
+          <li><a href="#product">Product boundary</a></li>
+          <li><a href="#modes">Modes</a></li>
+          <li><a href="#flow">Lifecycle</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#safety">Safety</a></li>
+          <li><a href="#platform">Platform matrix</a></li>
+          <li><a href="#validation">Validation</a></li>
+          <li><a href="#build">Build order</a></li>
+          <li><a href="#handoff">Handoff</a></li>
+        </ul>
+        <div class="divider"></div>
+        <div class="px-3 text-xs leading-relaxed opacity-55">Visual review artifact generated from the execution-ready Markdown masterplan.</div>
+      </nav>
+    </aside>
+  </div>
+
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.esm.min.mjs";
+    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const paint = document.createElement("canvas").getContext("2d");
+    function toRgba(color) {
+      paint.clearRect(0, 0, 1, 1);
+      paint.fillStyle = "#000";
+      paint.fillStyle = color;
+      paint.fillRect(0, 0, 1, 1);
+      return paint.getImageData(0, 0, 1, 1).data;
+    }
+    function compositeRgba(foreground, background) {
+      const fa = foreground[3] / 255;
+      const ba = background[3] / 255;
+      const a = fa + ba * (1 - fa);
+      if (a === 0) return [0, 0, 0, 0];
+      return [
+        (foreground[0] * fa + background[0] * ba * (1 - fa)) / a,
+        (foreground[1] * fa + background[1] * ba * (1 - fa)) / a,
+        (foreground[2] * fa + background[2] * ba * (1 - fa)) / a,
+        a * 255,
+      ];
+    }
+    function pageIsDark() {
+      const root = document.documentElement;
+      const rootBg = toRgba(getComputedStyle(root).backgroundColor);
+      const bodyBg = document.body ? toRgba(getComputedStyle(document.body).backgroundColor) : [0, 0, 0, 0];
+      const [r, g, b, a] = compositeRgba(bodyBg, rootBg);
+      if (a > 0) return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 < 0.5;
+      return darkQuery.matches;
+    }
+    const diagrams = [...document.querySelectorAll(".mermaid")].map((el) => ({ el, src: el.textContent }));
+    let applied;
+    let rendering = false;
+    let queued = false;
+    function queueRender() { queued = true; if (!rendering) void render(); }
+    async function render() {
+      rendering = true;
+      try {
+        while (queued) {
+          queued = false;
+          const theme = pageIsDark() ? "dark" : "default";
+          if (theme === applied) continue;
+          mermaid.initialize({ startOnLoad: false, theme, securityLevel: "strict" });
+          for (const { el, src } of diagrams) { el.removeAttribute("data-processed"); el.textContent = src; }
+          try { await mermaid.run({ nodes: diagrams.map((d) => d.el) }); }
+          catch (error) { console.error("Mermaid diagram render failed:", error); return; }
+          applied = theme;
+        }
+      } finally { rendering = false; if (queued) queueRender(); }
+    }
+    if (document.readyState === "complete") queueRender();
+    else window.addEventListener("load", queueRender, { once: true });
+    const observer = new MutationObserver(queueRender);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "class", "style"] });
+    observer.observe(document.body, { attributes: true, attributeFilter: ["data-theme", "class", "style"] });
+    darkQuery.addEventListener("change", queueRender);
+  </script>
+</body>
+</html>
