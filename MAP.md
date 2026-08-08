@@ -8,11 +8,11 @@ Agent skill + Python helper that keeps project AI context and file hygiene clean
 
 | Need | Open |
 |---|---|
-| Skill procedure | `skill/overseer/SKILL.md` |
-| Python CLI / engine | `skill/overseer/scripts/overseer.py` |
-| Overview + safety model | `README.md` |
-| Project rules | `AGENTS.md` |
-| Tests | `tests/` |
+| Skill procedure | [skill/overseer/SKILL.md](skill/overseer/SKILL.md) |
+| Python CLI / engine | [skill/overseer/scripts/overseer.py](skill/overseer/scripts/overseer.py) |
+| Overview + safety model | [README.md](README.md) |
+| Project rules | [AGENTS.md](AGENTS.md) |
+| Tests | [tests/](tests/) |
 
 ## Layout
 
