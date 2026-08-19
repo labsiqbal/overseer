@@ -8,8 +8,8 @@ documentation.
 
 ## Rules
 
-- Follow the Standards: `~/projects/.standards/` (glossary, project-types, workflow).
+- Follow the Standards: `~/workspace/.standards/` (glossary, project-types, workflow).
 - State lives in git history. Commit messages say what + why.
-- NOTE: the Standards ban per-project `overseer.md` ledgers in ~/projects
+- NOTE: the Standards ban per-project `overseer.md` ledgers in ~/workspace
   (state lives in wiki/log.md instead) - this repo is the skill's source, not
   a consumer.
